@@ -11,7 +11,7 @@ let g = () => {
 }
 .link {
   text-decoration: underline;
-  fill: #00ee00;
+  fill: #ee00ee;
 }
 .shiftA,
 .shiftB,
@@ -24,19 +24,19 @@ let g = () => {
 .shiftA {
   animation-name: translateA;
   animation-duration: 1000ms;
-  animation-delay: -333ms;
+  animation-delay: -250ms;
 }
 
 .shiftB {
   animation-name: translateB;
   animation-duration: 1000ms;
-  animation-delay: -666ms;
+  animation-delay: -500ms;
 }
 
 .shiftC {
   animation-name: translateC;
   animation-duration: 1000ms;
-  animation-delay: -0ms;
+  animation-delay: -750ms;
 }
 
 @keyframes translateA {
