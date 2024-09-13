@@ -1,71 +1,68 @@
 // 362 x 204
 let g = () => {
   const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 204" width="450px" height="204px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 204" width="450px" height="204px">
       <style>
-        .text { font-family: monospace; font-size: 12px; white-space: pre; fill: #00ee00; }
-          .shiftA {
-                transform-origin: center center;
-                animation-name: translateA;
-                animation-duration: 1000ms;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                animation-delay: -100ms;
-            }
+.text {
+  font-family: monospace;
+  font-size: 12px;
+  white-space: pre;
+  fill: #00ee00;
+}
+.link {
+  text-decoration: underline;
+  fill: #00ee00;
+}
+.shiftA,
+.shiftB,
+.shiftC {
+  transform-origin: center center;
+  animation-timing-function: cubic-bezier(0.58, 0, 0.44, 0.99);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.shiftA {
+  animation-name: translateA;
+  animation-duration: 1000ms;
+  animation-delay: -333ms;
+}
 
-          .shiftB {
-                transform-origin: center center;
-                animation-name: translateB;
-                animation-duration: 1100ms;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                animation-delay: -200ms;
+.shiftB {
+  animation-name: translateB;
+  animation-duration: 1000ms;
+  animation-delay: -666ms;
+}
 
-            }
+.shiftC {
+  animation-name: translateC;
+  animation-duration: 1000ms;
+  animation-delay: -0ms;
+}
 
-
-          .shiftC {
-                transform-origin: center center;
-                animation-name: translateB;
-                animation-duration: 900ms;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                animation-delay: -500ms;
-            }
-
-        @keyframes translateA {
-            0%, 40%, 100% {
-                transform: translateX(0);
-            }
-            20% {
-                transform: translateX(5px)
-            }
-            60% {
-                transform: translateX(-5px)
-            }
-        }
-         @keyframes translateB {
-            0%, 60%, 100% {
-                transform: translateX(0);
-            }
-            30% {
-                transform: translateX(3px)
-            }
-            80% {
-                transform: translateX(-3px)
-            }
-        }
-         @keyframes translateC {
-            0%, 50%, 100% {
-                transform: translateX(0);
-            }
-            20% {
-                transform: translateX(2px)
-            }
-            70% {
-                transform: translateX(-2px)
-            }
-        }
+@keyframes translateA {
+  0% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+@keyframes translateB {
+  0% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+@keyframes translateC {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
       </style>
       <text x="0" y="020" class="text shiftC">             ██████                    ███                 </text>
       <text x="0" y="035" class="text shiftB">            ███░░███                  ░███                 </text>
@@ -79,6 +76,7 @@ let g = () => {
       <text x="0" y="155" class="text shiftB">                                                 ░░██████ </text>
       <text x="0" y="170" class="text xxxxxx">           Design and development by &amp;why         ░░░░░░   </text>
       <text x="0" y="185" class="text xxxxxx">           Make the future happen today              </text>
+      <text x="0" y="200" class="text xxxxxx">           Visit us at <a class="link" target="_blank" href="https://why.de">https://why.de</a>  </text>
     </svg>
     `;
 
