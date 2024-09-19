@@ -1,17 +1,18 @@
 // 362 x 204
 let g = () => {
   const svg = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 204" width="450px" height="204px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 160" width="450px" height="160px">
       <style>
 .text {
   font-family: monospace;
   font-size: 12px;
   white-space: pre;
   fill: #00ee00;
+  font-weight: bold
 }
 .link {
   text-decoration: underline;
-  fill: #ee00ee;
+  fill: #00ee00;
 }
 .shiftA,
 .shiftB,
@@ -24,19 +25,19 @@ let g = () => {
 .shiftA {
   animation-name: translateA;
   animation-duration: 1000ms;
-  animation-delay: -250ms;
+  animation-delay: -333ms;
 }
 
 .shiftB {
   animation-name: translateB;
   animation-duration: 1000ms;
-  animation-delay: -500ms;
+  animation-delay: -666ms;
 }
 
 .shiftC {
   animation-name: translateC;
   animation-duration: 1000ms;
-  animation-delay: -750ms;
+  animation-delay: -0ms;
 }
 
 @keyframes translateA {
@@ -72,11 +73,8 @@ let g = () => {
       <text x="0" y="095" class="text shiftB">          ░███ ░░███  ░░███████████   ░███ ░███  ░███ ░███ </text>
       <text x="0" y="110" class="text shiftA">          ░░█████░███  ░░████░████    ░███ ░███  ░░███████</text>
       <text x="0" y="125" class="text shiftB">           ░░░░░ ░░░    ░░░░ ░░░░     ░░░  ░░░░   ░░░░░███</text>
-      <text x="0" y="140" class="text shiftC">                                                  ███ ░███</text>
-      <text x="0" y="155" class="text shiftB">                                                 ░░██████ </text>
-      <text x="0" y="170" class="text xxxxxx">           Design and development by &amp;why         ░░░░░░   </text>
-      <text x="0" y="185" class="text xxxxxx">           Make the future happen today              </text>
-      <text x="0" y="200" class="text xxxxxx">           Visit us at <a class="link" target="_blank" href="https://why.de">https://why.de</a>  </text>
+      <text x="0" y="140" class="text shiftA">                                                  ███ ░███</text>
+      <text x="0" y="155" class="text shiftC">                                                 ░░██████ </text>
     </svg>
     `;
 
@@ -89,11 +87,26 @@ let g = () => {
   //     encodeURIComponent(svg)
   //   )}`;
 
+  // console.log(
+  //   "%c ",
+  //   `
+  //       background-image: url(${svgDataUrl});
+  //       padding-bottom: 204px;
+  //       padding-left: 450px;
+  //       margin: 0px;
+  //       background-size: contain;
+  //       background-position: center center;
+  //       background-repeat: no-repeat;
+  //       :after {
+  //       content: "hello"
+  //       }
+  //     `
+  // );
   console.log(
-    "%c ",
+    `%c %c\n           Design and development by &why          ░░░░░░\n           Make the future happen today\n           Visit us at https://why.de`,
     `
         background-image: url(${svgDataUrl});
-        padding-bottom: 204px;
+        padding-bottom: 150px;
         padding-left: 450px;
         margin: 0px;
         background-size: contain;
@@ -102,7 +115,8 @@ let g = () => {
         :after {
         content: "hello"
         }
-      `
+      `,
+    "font-family: monospace; color: #00ee00; font-size: 12px; font-weight: bold;"
   );
 };
 
