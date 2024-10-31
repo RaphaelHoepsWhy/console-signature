@@ -4,7 +4,7 @@
 
 **What is this?**
 
-- `console-signature.js` prints an &why signature to the dev console.
+- `console-signature.js` prints an &why signature to the dev console. If the browser supports it, an animation will be added.
 
 **How to use?**
 
